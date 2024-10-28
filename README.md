@@ -11,9 +11,11 @@ Users can generate a secure 4-digit OTP that expires after a set period, enhanci
 (2)Session Management with JWT Authentication:
 Each user session is authenticated with a JWT token, enabling secure, stateless authentication. This helps in managing user sessions effectively.
 
-(3)Rate Limiting and Attempt Tracking: The system tracks the number of OTP verification attempts, restricting multiple incorrect attempts for added security.
+(3)Rate Limiting and Attempt Tracking:
+The system tracks the number of OTP verification attempts, restricting multiple incorrect attempts for added security.
 
-(4)Data Management and Display: The dashboard shows session information such as attempts, OTP generation times, and status. Data of the session is stored in the mongo db.
+(4)Data Management and Display: 
+The dashboard shows session information such as attempts, OTP generation times, and status. Data of the session is stored in the mongo db.
 
 Tech Stack =>
 Frontend: React, Tailwind CSS
@@ -67,25 +69,38 @@ git clone <repository-url>
 3. In the second terminal, navigate to the `backend` folder and start the backend:
 
    ```bash
-   npm run dev
+   node server.js
    ```
 
 The application should now be up and running on the specified ports. Open your browser and go to  to access the OTP verification system.
 
 BELOW ARE SCREENSHOTS OF THE PROJECT:-
 
+## STARTING PAGE
+
 <img width="707" alt="Screenshot 2024-10-28 at 3 35 58 PM" src="https://github.com/user-attachments/assets/f9b271b5-edd5-45bd-aaf7-a807a44cd7a7">
 
 <img width="639" alt="Screenshot 2024-10-28 at 3 36 21 PM" src="https://github.com/user-attachments/assets/cc1cc631-1ad6-4fb5-84cf-46774e5aade7">
 
+## OTP GENERATOR
 <img width="643" alt="Screenshot 2024-10-28 at 3 36 30 PM" src="https://github.com/user-attachments/assets/dcac8d3a-e544-4348-a38c-e381c0637518">
 
+## OTP GENERATED 
+Note: I have used popup to show you correct otp if you want to get verified
+(In real life popup will be removed)
 <img width="1121" alt="Screenshot 2024-10-28 at 3 36 51 PM" src="https://github.com/user-attachments/assets/f09b930a-9c69-4c60-89ea-78c6a95f4055">
 
+## Entering wrong OTP therefore verification failed 
 <img width="772" alt="Screenshot 2024-10-28 at 3 37 17 PM" src="https://github.com/user-attachments/assets/4a4ea02c-528a-4012-b980-141a242b8d93">
 
+
+## Verification Sucessfull
 <img width="732" alt="Screenshot 2024-10-28 at 3 37 45 PM" src="https://github.com/user-attachments/assets/bc05c91d-65c1-45b2-8bc6-8a17b969c0cc">
 
 
 
+## If too many attemps otp will be destroyed and you will have to generate again 
+<img width="629" alt="Screenshot 2024-10-28 at 4 10 02 PM" src="https://github.com/user-attachments/assets/eb63d19c-152f-4db4-a1ae-bd655b164843">
+
+## Mongo db datatbase is used and OTP expire after 1 hour.
 
